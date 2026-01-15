@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Cesário Verde – Horas Mortas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #0f172a;
+      color: #e5e7eb;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #020617;
+      padding: 30px 20px;
+      text-align: center;
+      border-bottom: 3px solid #f59e0b;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header h1 {
+      color: #f59e0b;
+      margin: 0;
+      font-size: 30px;
+      position: relative;
+      z-index: 2;
+    }
+
+    header p {
+      color: #9ca3af;
+      margin-top: 8px;
+      font-size: 15px;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Efeito prédios */
+   .cidade {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between; /* distribui os prédios ao longo de todo o header */
+  padding: 0 10px; /* espaçamento nas bordas */
+  z-index: 1;
+}
+
+
+    .predio {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      width: 20px;
+      height: 60px;
+      background-color: #111;
+      border-radius: 2px;
+      padding: 2px 0;
+    }
+
+    .janela {
+      width: 4px;
+      height: 8px;
+      background-color: #222;
+      margin: 2px auto;
+      border-radius: 1px;
+      animation: piscar 1.5s infinite;
+    }
+
+    /* Animação de piscar luz */
+    @keyframes piscar {
+      0%, 100% { background-color: #222; }
+      20%, 40%, 60%, 80% { background-color: #f59e0b; }
+    }
+
+    /* Variações de delay para ficar aleatório */
+    .janela:nth-child(1) { animation-delay: 0s; }
+    .janela:nth-child(2) { animation-delay: 0.3s; }
+    .janela:nth-child(3) { animation-delay: 0.6s; }
+    .janela:nth-child(4) { animation-delay: 0.9s; }
+    .janela:nth-child(5) { animation-delay: 1.2s; }
+
+    nav {
+      background-color: #020617;
+      padding: 10px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+    }
+
+    nav a {
+      color: #e5e7eb;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #f59e0b;
+    }
+
+    section {
+      max-width: 900px;
+      margin: auto;
+      padding: 35px 20px;
+    }
+
+    h2 {
+      color: #f59e0b;
+      border-bottom: 2px solid #f59e0b;
+      padding-bottom: 5px;
+    }
+
+    .box {
+      background-color: #020617;
+      padding: 18px;
+      border-radius: 8px;
+      margin-top: 18px;
+    }
+
+    .poema {
+      font-style: italic;
+      background-color: #020617;
+      border-left: 5px solid #f59e0b;
+      padding: 18px;
+      margin: 18px 0;
+    }
+
+    ul {
+      margin-left: 18px;
+    }
+
+    footer {
+      background-color: #020617;
+      text-align: center;
+      padding: 18px;
+      color: #9ca3af;
+      border-top: 1px solid #334155;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Cesário Verde</h1>
+  <p>O Sentimento dum Ocidental – Horas Mortas</p>
+
+  <!-- Prédios com luzes piscando -->
+  <div class="cidade">
+    <div class="predio">
+      <div class="janela"></div>
+      <div class="janela"></div>
+      <div class="janela"></div>
+    </div>
+    <div class="predio">
+      <div class="janela"></div>
+      <div class="janela"></div>
+      <div class="janela"></div>
+      <div class="janela"></div>
+    </div>
+    <div class="predio">
+      <div class="janela"></div>
+      <div class="janela"></div>
+      <div class="janela"></div>
+      <div class="janela"></div>
+      <div class="janela"></div>
+    </div>
+    <div class="predio">
+      <div class="janela"></div>
+      <div class="janela"></div>
+      <div class="janela"></div>
+    </div>
+    <div class="predio">
+      <div class="janela"></div>
+      <div class="janela"></div>
+      <div class="janela"></div>
+      <div class="janela"></div>
+    </div>
+        <div class="predio">
+      <div class="janela"></div>
+      <div class="janela"></div>
+      <div class="janela"></div>
+      <div class="janela"></div>
+    </div>
+    <div class="predio">
+      <div class="janela"></div>
+      <div class="janela"></div>
+      <div class="janela"></div>
+      <div class="janela"></div>
+      <div class="janela"></div>
+    </div>
+    <div class="predio">
+      <div class="janela"></div>
+      <div class="janela"></div>
+      <div class="janela"></div>
+    </div>
+    <div class="predio">
+      <div class="janela"></div>
+      <div class="janela"></div>
+      <div class="janela"></div>
+      <div class="janela"></div>
+    </div>
+        <div class="predio">
+      <div class="janela"></div>
+      <div class="janela"></div>
+      <div class="janela"></div>
+      <div class="janela"></div>
+    </div>
+    <div class="predio">
+      <div class="janela"></div>
+      <div class="janela"></div>
+      <div class="janela"></div>
+      <div class="janela"></div>
+      <div class="janela"></div>
+    </div>
+    <div class="predio">
+      <div class="janela"></div>
+      <div class="janela"></div>
+      <div class="janela"></div>
+    </div>
+    <div class="predio">
+      <div class="janela"></div>
+      <div class="janela"></div>
+      <div class="janela"></div>
+      <div class="janela"></div>
+    </div>
+    <div class="predio">
+      <div class="janela"></div>
+      <div class="janela"></div>
+      <div class="janela"></div>
+      <div class="janela"></div>
+    </div>
+    <div class="predio">
+      <div class="janela"></div>
+      <div class="janela"></div>
+      <div class="janela"></div>
+      <div class="janela"></div>
+    </div>
+    <div class="predio">
+      <div class="janela"></div>
+      <div class="janela"></div>
+      <div class="janela"></div>
+      <div class="janela"></div>
+    </div>
+    <div class="predio">
+      <div class="janela"></div>
+      <div class="janela"></div>
+      <div class="janela"></div>
+      <div class="janela"></div>
+    </div>
+    <div class="predio">
+      <div class="janela"></div>
+      <div class="janela"></div>
+      <div class="janela"></div>
+      <div class="janela"></div>
+    </div>
+    <div class="predio">
+      <div class="janela"></div>
+      <div class="janela"></div>
+      <div class="janela"></div>
+      <div class="janela"></div>
+    </div>
+    <div class="predio">
+      <div class="janela"></div>
+      <div class="janela"></div>
+      <div class="janela"></div>
+      <div class="janela"></div>
+    </div>
+    <div class="predio">
+      <div class="janela"></div>
+      <div class="janela"></div>
+      <div class="janela"></div>
+      <div class="janela"></div>
+    </div>
+    
+  </div>
+</header>
+
+<nav>
+  <a href="#autor">Autor</a>
+  <a href="#poema">Poema</a>
+  <a href="#analise">Análise</a>
+  <a href="#tempo">Tempo e Espaço</a>
+  <a href="#critica">Crítica Social</a>
+  <a href="#lusiadas">Os Lusíadas</a>
+</nav>
+
+<section id="autor">
+  <h2>O Autor</h2>
+  <div class="box">
+    <p>
+      Cesário Verde foi um poeta português do século XIX.
+      Não escreveu muitos poemas, mas ficou bastante conhecido
+      pela forma como descreve a cidade e a sociedade da época.
+    </p>
+    <p>
+      Nos seus textos, ele fala muito da vida em Lisboa,
+      mostrando problemas sociais, pobreza e também a falta
+      de valores das pessoas.
+    </p>
+  </div>
+</section>
+
+<section id="poema">
+  <h2>O Poema – Horas Mortas</h2>
+
+  <div class="poema">
+    <p>
+      Vêm lágrimas de luz dos astros com olheiras,<br>
+      Enleva-me a quimera azul de transmigrar.<br>
+      Por baixo, que portões! Que arruamentos!<br>
+      Um parafuso cai nas lajes, às escuras...
+    </p>
+  </div>
+
+  <p>
+    O poema <strong>Horas Mortas</strong> passa-se durante a noite.
+    O sujeito poético anda pela cidade de Lisboa,
+    observando tudo à sua volta, num ambiente silencioso e escuro.
+  </p>
+</section>
+
+<section id="analise">
+  <h2>Análise do Poema</h2>
+  <div class="box">
+    <p>
+      Ao longo do poema, o sujeito poético vai caminhando pela cidade
+      e reparando em ruas, fachadas e pequenos detalhes.
+      Tudo isto transmite uma sensação de tristeza e solidão.
+    </p>
+    <p>
+      Existe um contraste entre a luz e a escuridão.
+      A luz aparece ligada ao sonho e à liberdade,
+      enquanto a escuridão representa a cidade degradada.
+    </p>
+    <p>
+      O eu lírico sente vontade de fugir daquela realidade
+      e imagina um mundo melhor, quase perfeito,
+      mesmo sabendo que isso não é real.
+    </p>
+  </div>
+</section>
+
+<section id="tempo">
+  <h2>Tempo, Espaço e Personagens</h2>
+  <div class="box">
+    <p><strong>Tempo:</strong></p>
+    <ul>
+      <li>Noite</li>
+      <li>Momento de silêncio</li>
+    </ul>
+
+    <p><strong>Espaço:</strong></p>
+    <ul>
+      <li>Ruas estreitas da cidade</li>
+      <li>Prédios antigos e escuros</li>
+      <li>Portões e arruamentos</li>
+    </ul>
+
+    <p><strong>Personagens:</strong></p>
+    <ul>
+      <li>Marginais da cidade</li>
+      <li>Figuras imaginárias, como os astros</li>
+      <li>Personagens sonhadas, como esposas e filhos</li>
+    </ul>
+  </div>
+</section>
+
+<section id="critica">
+  <h2>Crítica Social</h2>
+  <div class="box">
+    <p>
+      A burguesia é vista como ociosa e artificial,
+      vivendo sem grandes preocupações.
+      Por isso, é criticada pelo sujeito poético.
+    </p>
+    <p>
+      Os marginais da cidade aparecem como pessoas
+      excluídas e esquecidas pela sociedade.
+      Apesar da degradação, o poeta mostra alguma compaixão por eles.
+    </p>
+    <p>
+      No fundo, o poema mostra uma cidade em decadência
+      e uma sociedade que ignora os seus próprios problemas.
+    </p>
+  </div>
+</section>
+
+<section id="lusiadas">
+  <h2>Relação com Os Lusíadas</h2>
+  <div class="box">
+    <p>
+      Este poema pode ser visto como o oposto de <em>Os Lusíadas</em>.
+      Enquanto Camões exalta os heróis e as conquistas,
+      Cesário Verde mostra um país cansado e sem rumo.
+    </p>
+    <p>
+      Em vez de uma viagem marítima,
+      existe uma caminhada pela cidade.
+      Isso mostra que Portugal já não vive os tempos gloriosos do passado.
+    </p>
+  </div>
+</section>
+
+<footer>
+  <p>Português – 11.º ano</p>
+  <p>Trabalho sobre Cesário Verde</p>
+</footer>
+
+</body>
+</html>
